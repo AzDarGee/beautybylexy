@@ -2,196 +2,53 @@ html,
 body,
 header,
 .view {
-    height: 90%;
+    height: 100%;
+    background: rgba(0,0,0,0);
 }
-    /* Navigation*/
 
+html {
+    min-width:100%;
+    min-height:100%
+}
+html:after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("/dist/images/original/golden-greek-pattern.jpg");
+    width: 100%;
+    height: 100%;
+    opacity : 0.1;
+    z-index: -1;
+}
+
+// Row
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Navigation*/
+
+.navbar {
+    background-color: rgba(224, 185, 47, 0.7);
+}
+
+.top-nav-collapse {
+    background-color: rgba(224, 185, 47, 0.7);
+}
+@media only screen and (max-width: 768px) {
     .navbar {
-        background-color: rgba(224, 185, 47, 0.9);
+        background-color: rgba(224, 185, 47, 0.7);
     }
-
-    .top-nav-collapse {
-        background-color: rgba(224, 185, 47, 0.9);
-    }
-    @media only screen and (max-width: 768px) {
-        .navbar {
-            background-color: rgba(224, 185, 47, 0.9);
-        }
-    }
-    /*Intro*/
-    .view {
-        background: url("/dist/images/original/beautybg.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-
-
-
-
-
-
-
-//
-// .main-bg {
-//     background: url("../images/bg/bg15-small.jpg")no-repeat center center fixed;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//     @include blur(3px);
-//     &:hover {
-//       @include blur(0px);
-//     }
-// }
-//
-// /* Navigation*/
-//
-// .navbar {
-//     background-color: transparent;
-// }
-//
-// .top-nav-collapse {
-//     background-color: #4285F4;
-// }
-//
-// @media only screen and (max-width: 768px) {
-//     .navbar {
-//         background-color: #4285F4;
-//     }
-// }
-//
-// .profile-pic {
-//   @include blur(0px);
-//   padding: 3em;
-//   background: rgba(0,0,0,0.5);
-//   border-top-right-radius: 0;
-//   border-top-left-radius: 100px;
-//   border-bottom-left-radius: 0;
-//   border-bottom-right-radius: 0px;
-//   color: white;
-//   max-width: 600px;
-//   position: absolute;
-//   z-index: 99999;
-//   right: 0em;
-//   bottom: 0em;
-//   &:hover {
-//     @include blur(0px);
-//     transition-delay: 0.1s;
-//   }
-//   h1 small {
-//     color: white;
-//     font-weight: 100;
-//     font-size: 0.3em;
-//   }
-//   em {
-//     font-weight: 300;
-//     font-size: 1.6em;
-//   }
-//   .btn-floating {
-//     position: relative;
-//     overflow: hidden;
-//     z-index: 1;
-//     width: 37px;
-//     height: 37px;
-//     padding: 0;
-//     background-color: rgba(255,255,255,0.3);
-//     -webkit-border-radius: 50%;
-//     -moz-border-radius: 50%;
-//     -ms-border-radius: 50%;
-//     -o-border-radius: 50%;
-//     border-radius: 50%;
-//     transition: .3s;
-//     margin: 10px;
-//     display: inline-block;
-//     line-height: 55px;
-//     cursor: pointer;
-//     vertical-align: middle;
-//     opacity: 0.4;
-//     &:hover {
-//       background-color: rgba(255,255,255,0.7);
-//     }
-//   }
-//   .btn-large {
-//     width: 55.5px;
-//     height: 55.5px;
-//   }
-//
-//   @include bp-iphone5-5s {
-//     .small-prof-pic {
-//       display: none;
-//     }
-//     .scroll-button {
-//       display: none;
-//     }
-//   }
-//
-//   @include bp-small {
-//     padding: 2em;
-//     border-radius:0;
-//
-//   }
-// }
-//
-// .about-img {
-//   margin-bottom: 2em;
-// }
-//
-// .about-me-text {
-//   @include bp-small {
-//     padding: 10px;
-//
-//   }
-//
-// }
-//
-// .bg-image-desc {
-//   display: none;
-//   @include blur(0px);
-//   padding: 1em;
-//   background: rgba(0,0,0,0.5);
-//   border-top-right-radius: 50px;
-//   border-top-left-radius: 50px;
-//   border-bottom-left-radius: 50px;
-//   border-bottom-right-radius: 50px;
-//   color: white;
-//   max-width: 550px;
-//   position: absolute;
-//   z-index: 99999;
-//   left: 3em;
-//   top: 3em;
-//   &:hover {
-//     @include blur(0px);
-//     transition-delay: 0.1s;
-//   }
-//
-//   @include bp-small {
-//     padding: 1em;
-//   }
-// }
-//
-// .no-blur {
-//   @include blur(0px);
-// }
-//
-// .blur {
-//   @include blur(2px);
-// }
-//
-// .projects {
-//   &:hover {
-//     @include blur(0);
-//   }
-// }
-//
-// #featured-projects {
-//   .card {
-//     margin: 0.5em;
-//   }
-// }
-//
-// .icons-sm {
-//   font-size: 2em;
-//   margin: 0.5em;
-// }
+}
+/*Intro*/
+.view {
+    background: url("/dist/images/original/beautybg.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+}
