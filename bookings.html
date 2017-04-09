@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Beauty By Lexyyy</title>
+    <title>Bookings | Beauty By Lexyyy</title>
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/mdb.min.css">
     <link rel="stylesheet" href="dist/css/animate.min.css">
@@ -12,10 +12,8 @@
   </head>
 
   <body>
-
-
     <!--Navigation & Intro-->
-    <header>
+    <header class="portfolio">
         <nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar fixed-top">
             <div class="container">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,11 +35,11 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item">Cosmetics</a>
                                 <a class="dropdown-item">Fashion</a>
-                                <a class="dropdown-item">Something else here ...</a>
+                                <a class="dropdown-item">Something else here...</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/bookings.html">Book Online</a>
+                            <a class="nav-link active" href="/bookings.html">Book Online</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav nav-flex-icons">
@@ -61,32 +59,24 @@
                 </div>
             </div>
         </nav>
-        <!--Mask-->
-        <div class="view hm-black-strong">
-            <div class="full-bg-img flex-center">
-                <div class="container">
-                    <div class="white-text wow fadeInUp">
-                        <h1>Beauty By Lexyyy</h1>
-                        <h5>Let me beautify you...</h5>
-                        <br>
-                        <p>__________ OPTIONAL</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.Mask-->
     </header>
     <!--/.Navigation & Intro-->
 
-    <img src="/dist/images/profile2x/prof1.jpg" alt="..." class="rounded-circle">
+    <!-- Booking Module -->
+
+    <div class="container-fluid">
+      <h1 class="text-center">Book Online</h1>
+      <div id="bookingjs"></div>
+    </div>
 
 
 
-
-    <!--/.Main Content  -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+    <script src="//cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+    <script>window.timekitBookingConfig = { widgetId: 'eb27b216-1e7a-4452-a512-b670d63cf97f' }</script>
 
     <!-- Footer -->
-    <footer class="page-footer center-on-small-only" style="background-color: rgba(0, 0, 0, 0.8);">
+    <footer class="page-footer center-on-small-only" style="background-color: rgba(0, 0, 0, 0.8);" >
 
 
             <!--Second row-->
@@ -158,7 +148,7 @@
         <!--/Footer Links-->
 
         <!--Copyright-->
-        <div class="footer-copyright copyright wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
+        <div class="footer-copyright wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
             <div class="container-fluid">
                 © 2017 Copyright: <a href="http://www.lucidlabs.io">LucidLabs LLC.</a>
 
