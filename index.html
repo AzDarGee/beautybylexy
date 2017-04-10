@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +22,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
+                    <img src="/dist/images/svg/001-people.svg" style="height:3.9em;" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
                 </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto">
+                <div class="collapse navbar-collapse flex-center" id="navbarNav">
+                    <ul class="navbar-nav mr-auto flex-center">
                         <li class="nav-item">
                             <a class="nav-link" href="/portfolio.html">Portfolio</a>
                         </li>
@@ -44,7 +44,7 @@
                             <a class="nav-link" href="/bookings.html">Book Online</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav nav-flex-icons">
+                    <ul class="navbar-nav nav-flex-icons flex-center">
                         <li class="nav-item">
                             <a class="nav-link"><i class="fa fa-facebook"></i></a>
                         </li>
@@ -57,19 +57,23 @@
                         <li class="nav-item">
                             <a class="nav-link"><i class="fa fa-youtube"></i></a>
                         </li>
+                        <li id="player1" class="nav-item aplayer">
+                            <a class="nav-link"><i class="fa fa-play"></i></a>
+                        </li>
+                        <script src="/dist/js/APlayer.min.js"></script>
                     </ul>
                 </div>
             </div>
         </nav>
         <!--Mask-->
-        <div class="view hm-black-strong">
+        <div class="view hm-black-light pulse-bg-images">
             <div class="mask pattern-9 flex-center">
                 <div class="container">
                     <div class="white-text wow fadeInUp">
                         <h1 class="display-1 main-title">Beauty By Lexyyy</h1>
-                        <h5 class="display-4">Let me beautify you...</h5>
                         <br>
-                        <p>Scroll Down </p>
+                        <h2 class="display-4 slogan">Putting the Sexy Back In Lexy</h2>
+                        <br>
                     </div>
                 </div>
             </div>
@@ -78,7 +82,7 @@
     </header>
     <!--/.Navigation & Intro-->
 
-    <div class="container mt-2 text-center">
+    <div class="container mt-2 text-center" id="container">
       <div class="row">
         <div class="col-md-3">
           <img src="/dist/images/profile2x/prof1.jpg" alt="..." class="rounded-circle">
@@ -143,8 +147,7 @@
                     <h5 class="title">Location</h5>
 
                     <!--Address-->
-                    <p>89 Willowglen Dr.<br>
-                    Ottawa, ON<br>
+                    <p>Please Contact<br>
 
                     <!--Title-->
                     </p><h5 class="title">Contact</h5>
@@ -200,6 +203,6 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo_j1geMBRiKRqyi_Add_ff-hCj7Njpr0">
   </script>
   <script type="text/javascript" src="./dist/js/instafeed.min.js"></script>
-  <script type="text/javascript" src="./dist/js/main.min.js"></script>
+  <script type="text/javascript" src="./dist/js/main.js"></script>
 
 </html>

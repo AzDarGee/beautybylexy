@@ -22,6 +22,7 @@
     "imagemin-pngquant": "^5.0.0"
   },
   "dependencies": {
+    "aplayer": "^1.6.0",
     "connect-form": "^0.2.1",
     "express": "^4.14.0",
     "nodemailer": "^2.7.2",
