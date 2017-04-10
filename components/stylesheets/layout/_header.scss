@@ -185,6 +185,12 @@ html:after {
 }
 .vision-title {
   font-family: DancingScriptBold;
+  color: rgba(224, 185, 47, 0.8);
+}
+.vision-statement {
+  font-family: OpenSansCondensedLight;
+  font-size: 1.8em;
+  line-height: 1.1;
 }
 .chevron-size {
   font-size: 5em;
@@ -205,5 +211,5 @@ html:after {
 
 .fa {
   font-size: 1.5em;
-  padding: 5px; 
+  padding: 5px;
 }
