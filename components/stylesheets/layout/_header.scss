@@ -189,3 +189,16 @@ html:after {
 .chevron-size {
   font-size: 5em;
 }
+
+.navbar-brand > img {
+  height: 3.9em;
+}
+
+@media only screen and (max-width: 768px) {
+    .aplayer {
+        display: none;
+    }
+    .navbar-brand > img {
+      height: 2em;
+    }
+}
