@@ -22,3 +22,19 @@
 .carousel-inner {
     height: 100%;
 }
+
+.portfolio-section {
+  opacity: 1;
+}
+
+.portfolio-image {
+  opacity: 1;
+}
+
+.portfolio-card-block {
+  background-size: cover;
+  opacity: 1;
+  background: rgba(0,0,0,0.45);
+  border-left: 10px rgba(224, 185, 47, 0.5) solid;
+  border-radius: 55px;
+}
