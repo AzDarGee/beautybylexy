@@ -6,6 +6,10 @@
 
 .carousel {
     height: 70%;
+    opacity: 0.9;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0.7)));
+    mix-blend-mode: hard-light;
 }
 
 @media (max-width: 776px) {
@@ -37,4 +41,18 @@
   background: rgba(0,0,0,0.45);
   border-left: 10px rgba(224, 185, 47, 0.5) solid;
   border-radius: 55px;
+}
+
+.portfolio-title {
+  font-family: GreatVibes;
+}
+
+.pic-title {
+  font-family: Playball;
+  font-size: 8em;
+}
+
+.pic-desc {
+  font-family: KaushanScript;
+  font-size: 2em;
 }
