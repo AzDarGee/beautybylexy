@@ -121,7 +121,7 @@
             <!--/.Second slide -->
 
             <!-- Third slide -->
-            <div class="carousel-item hm-black-strong" style="background-image: url('/dist/images/original/eye-art.jpg'); background-repeat: no-repeat; background-size: cover; background-size: cover; background-position: bottom; background-position-y: -15em;">
+            <div class="carousel-item hm-black-strong" style="background-image: url('/dist/images/original/eye-art.jpg'); background-repeat: no-repeat; background-size: cover; background-size: cover; background-position: bottom; background-position-y: -10em;">
 
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
@@ -187,7 +187,7 @@
                       <a href="" class="orange-text"><h5>Bridal</h5></a>
                       <h3>Weddings & Prom</h3>
                       <p>Brief desc.</p>
-                      <a class="btn btn-ins"><i class="fa fa-clone left"></i> View project</a>
+                      <a class="btn btn-ins" data-toggle="modal" data-target=".bridal-modal"><i class="fa fa-clone left"></i> View project</a>
                   </div>
 
               </div>
@@ -207,9 +207,9 @@
                   <!--Excerpt-->
                   <div class="card-block">
                       <a href="" class="orange-text"><h5></i>Mysticism</h5></a>
-                      <h3>Fantasy & Airbrush</h3>
+                      <h3>Fantasy</h3>
                       <p>Brief desc.</p>
-                      <a class="btn btn-ins"><i class="fa fa-clone left"></i> View project</a>
+                      <a class="btn btn-ins" data-toggle="modal" data-target=".fantasy-modal"><i class="fa fa-clone left"></i> View project</a>
                   </div>
 
               </div>
@@ -231,7 +231,7 @@
                       <a href="" class="orange-text"><h5>Fashion</h5></a>
                       <h3>Latest Trends</h3>
                       <p>Brief Desc.</p>
-                      <a class="btn btn-ins"><i class="fa fa-clone left"></i> View project</a>
+                      <a class="btn btn-ins" data-toggle="modal" data-target=".latest-trends-modal"><i class="fa fa-clone left"></i> View project</a>
                   </div>
 
               </div>
@@ -241,6 +241,82 @@
       </section>
       <!--/Projects section v.2-->
 
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="modal fade bridal-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Latest Trends</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    ...
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <div class="modal fade fantasy-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Latest Trends</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    ...
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <div class="modal fade latest-trends-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Latest Trends</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    ...
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
     </div>
 
     <!-- Footer -->
@@ -261,11 +337,10 @@
                       <tbody>
                         <tr>
                           <td>Mon - Fri:</td>
-                          <td>10am - 6pm</td>
+                          <td>Per Client Basis</td>
                         </tr>
                         <tr>
-                          <td>Sat - Sun:</td>
-                          <td>8am - 4pm</td>
+                          <td colspan="2"><h5><a href="/" class="btn btn-ins">Terms Of Service</a></h5></td>
                         </tr>
                       </tbody>
                     </table>
@@ -279,14 +354,7 @@
                 <div class="col-xl-2 col-md-4">
 
                     <!--Title-->
-                    <h5 class="title">Location</h5>
-
-                    <!--Address-->
-                    <p>89 Willowglen Dr.<br>
-                    Ottawa, ON<br>
-
-                    <!--Title-->
-                    </p><h5 class="title">Contact</h5>
+                    <h5 class="title">Contact</h5>
 
                     <!--Contact info-->
                     <p>Alexandra Delalis<br>
