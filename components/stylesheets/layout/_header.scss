@@ -71,8 +71,19 @@ html:after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.2;
+    mask-image: -webkit-gradient(linear, left top, left bottom,
+    from(rgba(0,0,0,1)), to(rgba(255,255,255,1)));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,1)));
+    mix-blend-mode: normal;
 }
+//
+// .mainpage-title {
+//   background-color: rgba(0,0,0,0.5);
+//   padding: 2em;
+//   border-radius: 0.5em;
+// }
 
 /*Intro*/
 .view2 {
