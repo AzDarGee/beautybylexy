@@ -1,6 +1,3 @@
-// Initialize BootStrap Material Design
-// $.material.init()
-
 $(document).ready(function() {
 
 
@@ -45,7 +42,6 @@ $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', init_map);
 
   // APlayer
-
   var option = {
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
@@ -64,9 +60,29 @@ $(document).ready(function() {
         lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   // Optional, lrc, see: ###With lrc
     }
   }
-
   var ap = new APlayer(option);
 
+  // Device Compatibility
+      // Copyright 2014-2015 Twitter, Inc.
+      // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+      // IE 10
+      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        )
+        document.head.appendChild(msViewportStyle)
+      }
 
+      // Android Stock Browser
+      $(function () {
+        var nua = navigator.userAgent
+        var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+        if (isAndroid) {
+          $('select.form-control').removeClass('form-control').css('width', '100%')
+        }
+      })
 
 });

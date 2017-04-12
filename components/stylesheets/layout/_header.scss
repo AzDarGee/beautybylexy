@@ -230,3 +230,18 @@ html:after {
   font-size: 1.5em;
   padding: 5px;
 }
+
+
+//// BreakPoints - Other Devices /////
+
+@include bp-iphone5-5s {
+  .mainpage-title {
+    font-size: 0.5em;
+  }
+  .vision-title {
+    font-size: 3em;
+  }
+  .vision-statement {
+    font-size: 1.2em;
+  }
+}
