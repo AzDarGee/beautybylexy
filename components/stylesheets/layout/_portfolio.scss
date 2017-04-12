@@ -57,3 +57,53 @@
   font-family: KaushanScript;
   font-size: 2em;
 }
+
+.first-slide {
+  background-image: url('/dist/images/original/fantasies.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: -35em;
+}
+
+.second-slide {
+  background-image: url('/dist/images/original/indian-bridal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.third-slide {
+  background-image: url('/dist/images/original/eye-art.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  background-position-y: -15em;
+}
+
+//// BreakPoints - Other Devices /////
+
+@include bp-iphone5-5s {
+  .pic-title {
+    font-size: 3em;
+  }
+  .pic-desc {
+    font-size: 1.3em;
+  }
+  .first-slide {
+    background-image: url('/dist/images/original/fantasies.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-y: -20em;
+  }
+  .third-slide {
+    background-image: url('/dist/images/original/eye-art.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+    background-position-y: 0em;
+  }
+  .portfolio-title {
+    font-size: 3em;
+  }
+}

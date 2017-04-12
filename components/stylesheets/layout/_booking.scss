@@ -1,3 +1,20 @@
 .booking {
   height:10%;
 }
+
+.booking-title {
+  font-size: 6em;
+  padding-top: 0.5em;
+  font-family: Tangerine;
+
+}
+
+//// BreakPoints - Other Devices /////
+
+@include bp-iphone5-5s {
+  .booking-title {
+    font-size: 4em;
+    padding-top: 1em;
+    font-family: Tangerine;
+  }
+}
