@@ -78,12 +78,6 @@ html:after {
     from(rgba(0,0,0,1)), to(rgba(0,0,0,1)));
     mix-blend-mode: normal;
 }
-//
-// .mainpage-title {
-//   background-color: rgba(0,0,0,0.5);
-//   padding: 2em;
-//   border-radius: 0.5em;
-// }
 
 /*Intro*/
 .view2 {
@@ -114,6 +108,9 @@ html:after {
   95% {
     opacity: 0.95;
   }
+  94% {
+      opacity: 0.94;
+  }
 }
 @-moz-keyframes pulse {
   100% {
@@ -133,6 +130,9 @@ html:after {
   }
   95% {
     opacity: 0.95;
+  }
+  94% {
+      opacity: 0.94;
   }
 }
 @-o-keyframes pulse {
@@ -154,6 +154,9 @@ html:after {
   95% {
     opacity: 0.95;
   }
+  94% {
+      opacity: 0.94;
+  }
 }
 
 @keyframes pulse {
@@ -174,6 +177,9 @@ html:after {
   }
   95% {
     opacity: 0.95;
+  }
+  94% {
+      opacity: 0.94;
   }
 }
 
