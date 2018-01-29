@@ -3,7 +3,7 @@
 }
 
 .about-me {
-  top: 4em;
+  top: 5em;
 }
 
 .about-me-bio {
@@ -15,29 +15,29 @@
 
 
 
-
-@include bp-iphone4-4s {
-  .about-me {
-    top: 32em;
-  }
-}
-
-@include bp-iphone5-5s {
-  .about-me {
-    top: 30em;
-  }
-
-}
-
-@include bp-iphone6 {
-  .about-me {
-    top: 22em;
-  }
-
-}
-
-@include bp-iphone6-plus {
-  .about-me {
-    top: 15em;
-  }
-}
+//
+// @include bp-iphone4-4s {
+//   .about-me {
+//     top: 32em;
+//   }
+// }
+//
+// @include bp-iphone5-5s {
+//   .about-me {
+//     top: 30em;
+//   }
+//
+// }
+//
+// @include bp-iphone6 {
+//   .about-me {
+//     top: 22em;
+//   }
+//
+// }
+//
+// @include bp-iphone6-plus {
+//   .about-me {
+//     top: 15em;
+//   }
+// }

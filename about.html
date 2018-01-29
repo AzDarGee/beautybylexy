@@ -15,7 +15,7 @@
   <body>
     <!--Navigation & Intro-->
     <header>
-      <nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
           <div class="container">
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -25,30 +25,30 @@
               </a>
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav mr-auto flex-center">
-                      <li class="nav-item">
-                          <a class="nav-link" href="/portfolio.html">Portfolio</a>
-                      </li>
-                      <li class="nav-item active">
-                          <a class="nav-link" href="/about.html">About Me</a>
-                      </li>
-                      <li class="nav-item btn-group">
-                          <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vanity</a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                              <a class="dropdown-item">Cosmetics</a>
-                              <a class="dropdown-item">Fashion</a>
-                              <a class="dropdown-item">...</a>
-                          </div>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="/bookings.html">Book Online</a>
-                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bookings.html">Book Now <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About Me <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item btn-group">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ZodiaX</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item">Aquarius</a>
+                            <a class="dropdown-item">Pisces</a>
+                            <a class="dropdown-item">Aries</a>
+                        </div>
+                    </li>
                   </ul>
                   <ul class="navbar-nav nav-flex-icons flex-center">
                       <li class="nav-item">
                           <a class="nav-link" href="https://www.facebook.com/BeautyByLexyyy/" target="_blank"><i class="fa fa-facebook"></i></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href=""><i class="fa fa-twitter"></i></a>
+                          <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="https://www.instagram.com/lexydelalis__/" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -56,7 +56,7 @@
                       <li class="nav-item">
                           <a class="nav-link"><i class="fa fa-youtube"></i></a>
                       </li>
-                      <li id="player1" class="nav-item aplayer">
+                      <li id="player1" class="nav-item aplayer aplayer-narrow">
                           <a class="nav-link"><i class="fa fa-play"></i></a>
                       </li>
                       <script src="/dist/js/APlayer.min.js"></script>
@@ -64,23 +64,31 @@
               </div>
           </div>
       </nav>
+
       <!--Mask-->
     </header>
     <!--/.Navigation & Intro-->
 
     <!--Mask-->
     <div class="view2 hm-black-strong">
-        <div class="full-bg-img flex-center" style="overflow-y: auto;">
+        <div class="full-bg-img flex-center">
           <div class="container about-me">
-            <ul class="animated fadeInUp">
-                <li>
-                    <h1 class="h1-responsive">About Me</h1>
-                </li>
-                <li>
-                  <img src="/dist/images/profile/prof5.jpg" class="rounded" alt="">
-                </li>
-                <li>
+            <div class="animated fadeInUp text-center">
+                <div class="row">
+                  <div class="col-md-12">
 
+                    <h1 class="h1-responsive">About Me</h1>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="/dist/images/profile/prof5.jpg" class="rounded" alt="">
+                  </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-md-12">
                     <p class="about-me-bio">
                       I always envisioned myself choosing a path that energized ambition out of pure
 
@@ -109,14 +117,16 @@
                       and there is nothing more rewarding to me then people leaving my service feeling
 
                       both beautiful and confident.
-
-                  </p>
-                </li>
-                <li>
-                    <a href="/bookings.html" class="btn btn-warning btn-lg" rel="nofollow">Book Online Now!</a>
-                    <a href="/portfolio.html" class="btn btn-default btn-lg" rel="nofollow">See My Work</a>
-                </li>
-            </ul>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <a href="/bookings.html" class="btn btn-warning btn-lg" rel="nofollow">Book Online Now!</a>
+                      <a href="/portfolio.html" class="btn btn-default btn-lg" rel="nofollow">See My Work</a>
+                    </div>
+                </div>
+            </div>
             <br>
             <hr>
           </div>
@@ -125,13 +135,13 @@
     <!--/.Mask-->
 
     <!-- Footer -->
-    <footer class="page-footer center-on-small-only" style="background-color: rgba(0, 0, 0, 0.8);" >
+    <footer class="page-footer center-on-small-only container-fluid" style="background-color: rgba(0, 0, 0, 0.8);">
 
             <!--Second row-->
             <div class="row text-center wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
 
                 <!--First column-->
-                <div class="col-xl-3 offset-xl-2 col-md-4">
+                <div class="col-md-6">
 
                     <!--Title-->
                     <h5 class="title">Opening hours</h5>
@@ -152,12 +162,19 @@
                 </div>
                 <!--/First column-->
 
-                <hr class="w-100 hidden-md-up">
+                <!-- <hr class="w-100 hidden-md-up"> -->
 
                 <!--Second column-->
-                <div class="col-xl-2 col-md-4">
+                <div class="col-md-6">
 
-                    <h5 class="title">Contact</h5>
+                    <!--Title-->
+                    <h5 class="title">Location</h5>
+
+                    <!--Address-->
+                    <p>Please Contact<br>
+
+                    <!--Title-->
+                    </p><h5 class="title">Contact</h5>
 
                     <!--Contact info-->
                     <p>Lexy Delalis<br>
@@ -167,18 +184,7 @@
                 </div>
                 <!--/Second column-->
 
-                <hr class="w-100 hidden-md-up">
-
-                <!--Third column-->
-                <div class="col-xl-2 col-md-4">
-
-                    <!--Title-->
-                    <h5 class="title">Instagram</h5>
-
-
-
-                </div>
-                <!--/Third column-->
+                <!-- <hr class="w-100 hidden-md-up"> -->
 
             </div>
             <!--/Second row-->
@@ -187,7 +193,7 @@
         <!--/Footer Links-->
 
         <!--Copyright-->
-        <div class="footer-copyright wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
+        <div class="footer-copyright copyright wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
             <div class="container-fluid">
                 © 2017 Copyright: <a href="http://www.lucidlabs.io">LucidLabs LLC.</a>
 
@@ -202,14 +208,11 @@
 
   </body>
   <!-- SCRIPTS -->
+  <script type="text/javascript" src="./dist/js/main.min.js"></script>
   <script type="text/javascript" src="./dist/js/jquery.min.js"></script>
-  <script type="text/javascript" src="./dist/js/tether.min.js"></script>
+  <script type="text/javascript" src="./dist/js/popper.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./dist/js/mdb.min.js"></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo_j1geMBRiKRqyi_Add_ff-hCj7Njpr0">
-  </script>
-  <script type="text/javascript" src="./dist/js/instafeed.min.js"></script>
-  <script type="text/javascript" src="./dist/js/main.min.js"></script>
+  <script type="text/javascript" src="./dist/js/main.js"></script>
 
 </html>

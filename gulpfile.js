@@ -13,7 +13,6 @@ var pngquant = require('imagemin-pngquant');
 var imageresize = require('gulp-image-resize');
 var cache = require('gulp-cache');
 var gulpUtil = require('gulp-util');
-var Twitter = require('twitter');
 var exec = require('child_process').exec;
 
 var gzip_options = {
@@ -23,18 +22,44 @@ var gzip_options = {
     }
 };
 
-// Update All Bower/NPM Packages + Uglify + Minify Plugins
-// Will potentially screw up the site because vendors add/drop features and tags
-gulp.task('updatePackages', function (cb) {
-  // Update Bower Packages
-  exec('bower-update --non-interactive', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
+// Update Node / NPM
+gulp.task('updateTools', function (cb) {
+
+  // Update Node To Latest Stable Release
+  exec('sudo npm install -g n', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
   });
 
+  exec('sudo n stable', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
+  });
+
+  // Update NPM Globally To Latest Version
+  exec('sudo npm install npm@latest -g', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
+  });
+
+  // Minify + Uglify Newly Updated Packages
+  exec('gulp build', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) return cb(err);
+    cb(); // finished task
+  });
+});
+
+// Update All NPM Packages + Uglify + Minify Plugins
+// Will potentially screw up the site because vendors add/drop features and tags
+gulp.task('updatePackages', function (cb) {
+
   // Update NPM Packages
-  exec('npm update', function (err, stdout, stderr) {
+  exec('npm update -save', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     if (err) return cb(err);
@@ -49,7 +74,7 @@ gulp.task('updatePackages', function (cb) {
   });
 });
 
-/* Compile Our Sass */
+/* Compile Sass */
 gulp.task('sass', function() {
   return gulp.src('components/stylesheets/**/*.scss')
       .pipe(sass().on('error', sass.logError))
@@ -64,7 +89,7 @@ gulp.task('sass', function() {
       .pipe(browserSync.stream());
 });
 
-// Uglify JS
+// Uglify My JS files
 gulp.task('compress', function() {
   return gulp.src('components/scripts/*.js')
     .pipe(uglify().on('error', gulpUtil.log))
@@ -78,13 +103,12 @@ gulp.task('compress', function() {
     .pipe(browserSync.stream());
 });
 
-// Uglify Plugins
+// Uglify JS Plugins
 gulp.task('uglifyPlugins', function() {
-  return gulp.src(['components/libs/bootstrap/dist/js/bootstrap.js',
-    'components/libs/jquery/dist/jquery.js',
-    'components/libs/MDBootstrap/js/mdb.js',
-    'components/libs/MDBootstrap/js/tether.js',
-    'components/libs/instafeed.js/instafeed.js'])
+  return gulp.src(['node_modules/mdbootstrap/js/bootstrap.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/MDBootstrap/js/mdb.js',
+    'node_modules/MDBootstrap/js/popper.min.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'
@@ -97,10 +121,11 @@ gulp.task('uglifyPlugins', function() {
 
 // Minify Plugins
 gulp.task('minifyPlugins', function() {
-  return gulp.src(['components/libs/bootstrap/dist/css/bootstrap.css',
-    'components/libs/animate.css/animate.css',
-    'components/libs/font-awesome/css/font-awesome.css',
-    'components/libs/MDBootstrap/css/mdb.css'])
+  return gulp.src(['node_modules/mdbootstrap/css/bootstrap.css',
+    'node_modules/animate.css/animate.css',
+    'node_modules/font-awesome/css/font-awesome.css',
+    'node_modules/mdbootstrap/css/mdb.css',
+    'node_modules/aplayer/src/APlayer.scss'])
     .pipe(rename({
       suffix: '.min',
       extname: '.css'
@@ -111,8 +136,22 @@ gulp.task('minifyPlugins', function() {
     .pipe(browserSync.stream());
 });
 
+// Copy Fonts
+gulp.task('copyFonts', function() {
+   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('dist/font'))
+   .pipe(browserSync.stream());
+});
+
+//Copy MDBootstrap Imgs Folder to Dist
+gulp.task('copyMDBImgs', function() {
+   gulp.src('./node_modules/mdbootstrap/img/**/*.{png,svg,gif,jpg,jpeg,}')
+   .pipe(gulp.dest('dist/img'))
+   .pipe(browserSync.stream());
+});
+
 // Build Task - Run Uglify & Minify Plugins
-gulp.task('build', ['uglifyPlugins', 'minifyPlugins']);
+gulp.task('build', ['compress', 'sass', 'uglifyPlugins', 'minifyPlugins']);
 
 /* Watch Files For Changes */
 gulp.task('watch', function() {
@@ -121,7 +160,8 @@ gulp.task('watch', function() {
   browserSync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    port: 3000
   });
 
   gulp.watch('components/stylesheets/**/*.scss', ['sass']);
@@ -132,7 +172,14 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['sass', 'compress', 'uglifyPlugins', 'minifyPlugins', 'images', 'watch']);
+gulp.task('startServer', ['build', 'watch']);
+
+gulp.task('newProject', ['updateTools', 'updatePackages']);
+
+// Initialize Project Script
+
+// NEED A DEPLOY SCRIPT
+
 
 /**
  * Make sure Graphicsmagick is installed on your system
@@ -164,6 +211,7 @@ var images = [
     { folder: 'bg', width: 1920, crop: false },
     { folder: 'bg2x', width: 2048, crop: false },
     { folder: 'original', crop: false },
+    { folder: 'icons', crop: false },
     { folder: 'projects', width: 300, height: 300, crop: false },
     { folder: 'profile', width: 150, height: 150, crop: false },
     { folder: 'profile2x', width: 250, height: 400, crop: false }
@@ -207,24 +255,4 @@ gulp.task('images', function () {
         // maintaining the folder structure
         .pipe(gulp.dest(paths.dest+paths.folder+type.folder));
     });
-});
-
-
-/* twitter */
-gulp.task('twitter', function() {
-
-  var client = new Twitter({
-    consumer_key: 'Z9pVJo9jic4EC9kHnprVQsjAs',
-    consumer_secret: 'JM1aGjuKOikz8XHtIs72b85qdaf2jzmtTNT02n9RWmDlWME3Ad',
-    access_token_key: '2238399828-peO2Qpt2K3oTV0P1UeUQggQvVDhY7aEXP5IfRVD',
-    access_token_secret: '2UFPVGnOiEthmt2flhW82SAJR9nQ562DLrC1EIUxjL2lS'
-  });
-
-  var params = {screen_name: 'ashdarji'};
-  client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    if (!error) {
-      // console.log(tweets);
-    }
-  });
-
 });
