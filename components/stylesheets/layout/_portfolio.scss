@@ -5,7 +5,7 @@
 /* Carousel*/
 
 .carousel {
-    height: 70%;
+    height: 100%;
     mask-image: -webkit-gradient(linear, left top, left bottom,
     from(rgba(0,0,0,1)), to(rgba(255,255,255,1)));
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
@@ -36,11 +36,12 @@
   opacity: 1;
 }
 
-.portfolio-card-block {
+.card {
   background-size: cover;
   opacity: 1;
   background: rgba(0,0,0,0.45);
   border-left: 10px rgba(224, 185, 47, 0.5) solid;
+  border-right: 10px rgba(224, 185, 47, 0.5) solid;
   border-radius: 55px;
 }
 
@@ -59,10 +60,10 @@
 }
 
 .first-slide {
-  background-image: url('/dist/images/original/fantasies.jpg');
+  background-image: url('/dist/images/original/beautybg.jpg');
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-position-y: -35em;
+  background-size: cover;
+  background-position: right;
 }
 
 .second-slide {
@@ -72,12 +73,10 @@
 }
 
 .third-slide {
-  background-image: url('/dist/images/original/eye-art.jpg');
+  background-image: url('/dist/images/original/fantasies.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
   background-position: bottom;
-  background-position-y: -15em;
+  background-position-y: -35em;
 }
 
 //// BreakPoints - Other Devices /////
