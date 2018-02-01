@@ -108,7 +108,8 @@ gulp.task('uglifyPlugins', function() {
   return gulp.src(['node_modules/mdbootstrap/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.js',
     'node_modules/MDBootstrap/js/mdb.js',
-    'node_modules/MDBootstrap/js/popper.min.js'])
+    'node_modules/MDBootstrap/js/popper.min.js',
+    'node_modules/tether/dist/js/tether.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'
@@ -125,7 +126,8 @@ gulp.task('minifyPlugins', function() {
     'node_modules/animate.css/animate.css',
     'node_modules/font-awesome/css/font-awesome.css',
     'node_modules/mdbootstrap/css/mdb.css',
-    'node_modules/aplayer/src/APlayer.scss'])
+    'node_modules/aplayer/src/APlayer.scss',
+    'node_modules/tether/dist/css/tether.css'])
     .pipe(rename({
       suffix: '.min',
       extname: '.css'
@@ -214,7 +216,9 @@ var images = [
     { folder: 'icons', crop: false },
     { folder: 'projects', width: 300, height: 300, crop: false },
     { folder: 'profile', width: 150, height: 150, crop: false },
-    { folder: 'profile2x', width: 250, height: 400, crop: false }
+    { folder: 'profile2x', width: 250, height: 400, crop: false },
+    { folder: 'original/zodiac', crop: false },
+    { folder: 'original/zodiac/rare', crop: false }
 ];
 
 // images gulp task

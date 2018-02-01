@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Beauty By Lexy</title>
+    <link rel="stylesheet" href="dist/css/tether.min.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/mdb.min.css">
     <link rel="stylesheet" href="dist/css/animate.min.css">
@@ -16,69 +17,64 @@
 
     <!--Navigation & Intro-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="/">
-                    <img src="/dist/images/svg/001-people.svg" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto flex-center">
-                      <li class="nav-item">
-                          <a class="nav-link" href="/bookings.html">Book Now</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="/portfolio.html">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="/about.html">About Me</a>
-                      </li>
-                      <li class="nav-item btn-group">
-                          <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ZodiaX</a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                              <a class="dropdown-item">Aquarius</a>
-                              <a class="dropdown-item">Pisces</a>
-                              <a class="dropdown-item">Aries</a>
-                          </div>
-                      </li>
-                    </ul>
-                    <ul class="navbar-nav nav-flex-icons flex-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"><i class="fa fa-youtube"></i></a>
-                        </li>
-                        <li id="player1" class="nav-item aplayer aplayer-narrow">
-                            <a class="nav-link"><i class="fa fa-play"></i></a>
-                        </li>
-                        <script src="/dist/js/APlayer.min.js"></script>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!--Mask-->
-        <div class="view view-intro hm-black-light pulse-bg-images">
-            <div class="mask pattern-2 flex-center">
-                <div class="container">
-                    <div class="white-text mainpage-title wow fadeInUp mt-5">
-                        <h1 class="display-1 main-title">Beauty By Lexyyy</h1>
-                        <br>
-                        <h2 class="display-4 slogan">Putting the Sexy back in Lexy</h2>
-                        <br>
-                    </div>
-                </div>
-            </div>
+      <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
+        <div class="container">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+              <img src="/dist/images/svg/001-people.svg" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto flex-center">
+              <li class="nav-item">
+                  <a class="nav-link" href="/bookings.html">Book Now</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/zodiac.html">Zodiac</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons flex-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li id="player1" class="nav-item aplayer aplayer-narrow">
+                    <a class="nav-link"><i class="fa fa-play"></i></a>
+                </li>
+                <script src="/dist/js/APlayer.min.js"></script>
+            </ul>
+          </div>
         </div>
-        <!--/.Mask-->
+      </nav>
+      <!--Mask-->
+      <div class="view view-intro hm-black-light pulse-bg-images">
+        <div class="mask pattern-1 flex-center">
+          <div class="container">
+            <div class="white-text mainpage-title wow fadeInUp mt-5">
+              <h1 class="display-1 main-title">Beauty By Lexyyy</h1>
+              <hr color="white">
+              <h2 class="display-4 slogan first" id="slogan">"Putting the Sexy back in Lexy"</h2>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Mask-->
     </header>
     <!--/.Navigation & Intro-->
 
@@ -204,6 +200,7 @@
   <!-- SCRIPTS -->
   <script type="text/javascript" src="./dist/js/jquery.min.js"></script>
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
+  <script type="text/javascript" src="./dist/js/tether.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./dist/js/mdb.min.js"></script>
   <script type="text/javascript" src="./dist/js/main.js"></script>

@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "aplayer": "^*",
     "bootstrap-material-design": "^*",
     "connect-form": "^0.2.1",
     "font-awesome": "^4.7.0",
@@ -36,8 +37,8 @@
     "nodemailer": "^4.4.2",
     "popper.js": "1.12.9",
     "sendmail": "^1.1.1",
-    "velocity": "^*",
-    "aplayer": "^*"
+    "tether": "^1.4.3",
+    "velocity": "^*"
   },
   "engines": {
     "node": "9.2.1"
