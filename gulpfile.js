@@ -93,10 +93,11 @@ gulp.task('sass', function() {
 gulp.task('compress', function() {
   return gulp.src('components/scripts/*.js')
     .pipe(uglify().on('error', gulpUtil.log))
-    .pipe(gulp.dest('dist/js'))
     .pipe(rename({
-      suffix: '.min'
+      suffix: '.min',
+      extname: '.js'
     }))
+    .pipe(gulp.dest('dist/js'))
     .pipe(gzip(gzip_options))
     .pipe(gulp.dest('dist/js'))
     //Browser sync will watch changes and reload on save
@@ -109,7 +110,8 @@ gulp.task('uglifyPlugins', function() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/MDBootstrap/js/mdb.js',
     'node_modules/MDBootstrap/js/popper.min.js',
-    'node_modules/tether/dist/js/tether.js'])
+    'node_modules/tether/dist/js/tether.js',
+    'node_modules/wowjs/dist/wow.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'

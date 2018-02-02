@@ -13,82 +13,80 @@
   </head>
 
   <body>
-    <!--Navigation & Intro-->
+
     <header class="about">
       <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
-          <div class="container">
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand" href="/">
-                  <img src="/dist/images/svg/001-people.svg" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
-              </a>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav mr-auto flex-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/bookings.html">Book Now <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About Me <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item btn-group">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ZodiaX</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <a class="dropdown-item">Aquarius</a>
-                            <a class="dropdown-item">Pisces</a>
-                            <a class="dropdown-item">Aries</a>
-                        </div>
-                    </li>
-                  </ul>
-                  <ul class="navbar-nav nav-flex-icons flex-center">
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://www.facebook.com/BeautyByLexyyy/" target="_blank"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://www.instagram.com/lexydelalis__/" target="_blank"><i class="fa fa-instagram"></i></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link"><i class="fa fa-youtube"></i></a>
-                      </li>
-                      <li id="player1" class="nav-item aplayer aplayer-narrow">
-                          <a class="nav-link"><i class="fa fa-play"></i></a>
-                      </li>
-                      <script src="/dist/js/APlayer.min.js"></script>
-                  </ul>
-              </div>
+        <div class="container">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+              <img src="/dist/images/svg/001-people.svg" class="d-inline-block align-top" alt="BeautyByLexyyy Logo">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto flex-center">
+              <li class="nav-item">
+                  <a class="nav-link" href="/bookings.html">Book Now</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/zodiac.html">Zodiac</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons flex-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li id="player1" class="nav-item aplayer aplayer-narrow">
+                    <a class="nav-link"><i class="fa fa-play"></i></a>
+                </li>
+                <script src="/dist/js/APlayer.min.js"></script>
+            </ul>
           </div>
+        </div>
       </nav>
     </header>
-    <!--/.Navigation & Intro-->
 
-    <!--Mask-->
-    <div class="view hm-black-strong">
-        <div class="mask flex-center">
-          <div class="container about-me">
-            <div class="animated fadeInUp">
-                <div class="row">
-                  <br>
-                  <br>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <h1 class="h1-responsive white-text">About Me</h1>
+
+
+    <div id="about-me-carousel" class="carousel slide carousel-fade white-text about" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators zodiac">
+          <li data-target="#about-me-carousel" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- About Me BG -->
+        <div class="carousel-item active hm-black-strong about-me-bg">
+          <div class="full-bg-img flex-center white-text">
+            <div class="container">
+              <ul class="animated fadeIn col-md-12 zodiac-push-down">
+                <li>
+                  <h1 class="h1-responsive about-me-title">About Me</h1>
+                </li>
+                <li class="flex-center">
+                  <div class="about-me-prof-pic animated bounceInUp">
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="/dist/images/profile/prof5.jpg" class="rounded" alt="">
-                  </div>
-                </div>
+                </li>
                 <hr color="white">
-                <div class="row">
-                  <div class="col-md-12">
+                <li>
+                  <p class="zodiac-date">Alexandra <sup>(Lexy)</sup> Delalis</p>
+                </li>
+                <hr color="white">
+                <li>
+                  <p class="about-me-desc" style="padding: 10px 20px;">
                     <p class="about-me-bio">
                       I always envisioned myself choosing a path that energized ambition out of pure
 
@@ -118,22 +116,84 @@
 
                       both beautiful and confident.
                     </p>
-                  </div>
-                </div>
-                <hr color="white">
-                <div class="row">
-                    <div class="col-md-12">
-                      <a href="/bookings.html" class="btn btn-warning btn-lg" rel="nofollow">Book Online Now!</a>
-                      <a href="/portfolio.html" class="btn btn-default btn-lg" rel="nofollow">See My Work</a>
-                    </div>
-                </div>
+                  </p>
+                </li>
+              </ul>
             </div>
-
           </div>
         </div>
+
+        <!-- About Me BG2 -->
+        <div class="carousel-item hm-black-strong about-me-bg2">
+          <div class="full-bg-img flex-center white-text">
+            <div class="container">
+              <ul class="animated fadeIn col-md-12 zodiac-push-down">
+                <li>
+                  <h1 class="h1-responsive about-me-title">About Me</h1>
+                </li>
+                <li class="flex-center">
+                  <div class="about-me-prof-pic animated bounceInUp">
+                  </div>
+                </li>
+                <hr color="white">
+                <li>
+                  <p class="zodiac-date">Alexandra <sup>(Lexy)</sup> Delalis</p>
+                </li>
+                <hr color="white">
+                <li>
+                  <p class="about-me-desc" style="padding: 10px 20px;">
+                    <p class="about-me-bio">
+                      I always envisioned myself choosing a path that energized ambition out of pure
+
+                      excitement. For me, makeup is an art form that is empowering, healing and fun.
+
+                      While in University, I found myself missing the freedom to create art and explore the
+
+                      world on my own terms. One day, I remember doing my makeup and feeling not
+
+                      only inspired, but also completely lost in the art. As such, I daydreamed about
+
+                      creating my own makeup business. I realized the therapeutic value of rediscovering
+
+                      yourself with complete acceptance and having the courage to express it to the world
+
+                      unapologetically. So, upon graduation, I decided to chase this dream relentlessly by
+
+                      tuning into the most primitive core of my being. Because makeup artistry is
+
+                      inherently driven, you can expect originality and the highest standard of
+
+                      professionalism and cleanliness. I take pride in my work and I love to continuously
+
+                      build my skills and try new things. Getting your makeup done is a form of self-care
+
+                      and there is nothing more rewarding to me then people leaving my service feeling
+
+                      both beautiful and confident.
+                    </p>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <a class="carousel-control-prev" href="#about-me-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#about-me-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <footer class="page-footer center-on-small-only container-fluid" style="background-color: rgba(0, 0, 0, 0.8);">
+
+
+    <footer class="page-footer center-on-small-only" style="background-color: rgba(0, 0, 0, 0.8);">
       <div class="row text-center wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
           <div class="col-md-6">
 
@@ -144,11 +204,13 @@
               <table class="table">
                 <tbody>
                   <tr>
-                    <td>Mon - Fri:</td>
-                    <td>Per Client Basis</td>
+                    <td>Monday - Friday</td>
+                    <td>09:00 - 17:00</td>
                   </tr>
                   <tr>
-                    <td colspan="2"><h5><a href="/" class="btn btn-ins">Terms Of Service</a></h5></td>
+                    <td>Prices</td>
+                    <td>Per Client Basis</td>
+                    <!-- <td colspan="2"><h5><a href="/" class="btn btn-ins">Terms Of Service</a></h5></td> -->
                   </tr>
                 </tbody>
               </table>
@@ -171,24 +233,21 @@
               contact@beautybylexyyy.com</p>
 
           </div>
-
-
       </div>
-      <div class="footer-copyright copyright wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
-            <div class="container-fluid">
-                © 2017 Copyright: <a href="http://www.lucidlabs.io">LucidLabs LLC.</a>
-
-            </div>
-        </div>
+      <div class="footer-copyright copyright wow fadeIn" data-wow-delay="0.3s" style="animation-delay: 0.3s; animation-name: fadeIn; background-color: rgba(224, 185, 47, 0.4)">
+          <div class="container-fluid">
+              © 2017 Copyright: <a href="http://www.lucidlabs.io">LucidLabs LLC</a>
+          </div>
+      </div>
     </footer>
-
 
   </body>
   <!-- SCRIPTS -->
-  <script type="text/javascript" src="./dist/js/main.min.js"></script>
+  <script type="text/javascript" src="./dist/js/wow.min.js"></script>
   <script type="text/javascript" src="./dist/js/jquery.min.js"></script>
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
+  <script type="text/javascript" src="./dist/js/tether.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./dist/js/mdb.min.js"></script>
-  <script type="text/javascript" src="./dist/js/main.js"></script>
+  <script type="text/javascript" src="./dist/js/main.min.js"></script>
 </html>
