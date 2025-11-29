@@ -1,5 +1,5 @@
 # freelance-web
-This is Ashish Darji's software development consulting website.
+This is a website made for Lexy's salon way back in whatever year it was..
 
 ## Tools Being Used
 * Gulp
